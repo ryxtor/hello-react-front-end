@@ -1,8 +1,6 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getGreetingsFromAPI, getGreetings } from '../../redux/greetings/greetings';
-
-import React from "react"
 
 const Greeting = () => {
   const dispatch = useDispatch();
@@ -12,16 +10,16 @@ const Greeting = () => {
     const fetchData = async () => {
       const greetingsAPI = await getGreetingsFromAPI();
       dispatch(getGreetings(greetingsAPI));
-    }
+    };
     fetchData();
   }, [dispatch]);
 
   return (
-    <React.Fragment>
+    <>
       <h1>{greetings.message}</h1>
       <br />
-    </React.Fragment>
+    </>
   );
-}
+};
 
 export default Greeting;

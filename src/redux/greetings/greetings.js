@@ -1,7 +1,7 @@
 const GET_GREETINGS = 'HELLO_REACT_BACK_END/GREETINGS/GET_GREETINGS';
 
 const initialState = {
-  message: 'Initial Greeting'
+  message: 'Initial Greeting',
 };
 
 const reducer = (state = initialState, action) => {
